@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/maven_fixednetassets/!svn/ver/12/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/mapping
+END
+RoleMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/maven_fixednetassets/!svn/ver/8/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/mapping/RoleMapper.xml
+END
+Role_permissionMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/maven_fixednetassets/!svn/ver/8/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/mapping/Role_permissionMapper.xml
+END
+User_roleMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/maven_fixednetassets/!svn/ver/7/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/mapping/User_roleMapper.xml
+END
+UserMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/maven_fixednetassets/!svn/ver/4/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/mapping/UserMapper.xml
+END
+AccountMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/maven_fixednetassets/!svn/ver/12/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/mapping/AccountMapper.xml
+END
+PermissionMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/maven_fixednetassets/!svn/ver/8/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/mapping/PermissionMapper.xml
+END
+MenuMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/maven_fixednetassets/!svn/ver/7/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/mapping/MenuMapper.xml
+END
+Fixed_rate_total_monthMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/maven_fixednetassets/!svn/ver/19/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/mapping/Fixed_rate_total_monthMapper.xml
+END
+Fixed_net_assetMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/maven_fixednetassets/!svn/ver/34/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/mapping/Fixed_net_assetMapper.xml
+END
+Fixed_rate_detailMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/maven_fixednetassets/!svn/ver/19/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/mapping/Fixed_rate_detailMapper.xml
+END

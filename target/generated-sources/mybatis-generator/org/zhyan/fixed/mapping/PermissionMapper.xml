@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.zhyan.fixed.dao.PermissionMapper" >
+  <resultMap id="BaseResultMap" type="org.zhyan.fixed.bean.Permission" >
+    <id column="guid" property="guid" jdbcType="CHAR" />
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="permission_name" property="permissionName" jdbcType="CHAR" />
+    <result column="permission_sign" property="permissionSign" jdbcType="CHAR" />
+    <result column="description" property="description" jdbcType="CHAR" />
+    <result column="url" property="url" jdbcType="CHAR" />
+    <result column="menu_type" property="menuType" jdbcType="INTEGER" />
+    <result column="menu_name" property="menuName" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    guid, id, permission_name, permission_sign, description, url, menu_type, menu_name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from permission
+    where guid = #{guid,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from permission
+    where guid = #{guid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="org.zhyan.fixed.bean.Permission" >
+    insert into permission (guid, id, permission_name, 
+      permission_sign, description, url, 
+      menu_type, menu_name)
+    values (#{guid,jdbcType=CHAR}, #{id,jdbcType=BIGINT}, #{permissionName,jdbcType=CHAR}, 
+      #{permissionSign,jdbcType=CHAR}, #{description,jdbcType=CHAR}, #{url,jdbcType=CHAR}, 
+      #{menuType,jdbcType=INTEGER}, #{menuName,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.zhyan.fixed.bean.Permission" >
+    insert into permission
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="guid != null" >
+        guid,
+      </if>
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="permissionName != null" >
+        permission_name,
+      </if>
+      <if test="permissionSign != null" >
+        permission_sign,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="url != null" >
+        url,
+      </if>
+      <if test="menuType != null" >
+        menu_type,
+      </if>
+      <if test="menuName != null" >
+        menu_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="guid != null" >
+        #{guid,jdbcType=CHAR},
+      </if>
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="permissionName != null" >
+        #{permissionName,jdbcType=CHAR},
+      </if>
+      <if test="permissionSign != null" >
+        #{permissionSign,jdbcType=CHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=CHAR},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=CHAR},
+      </if>
+      <if test="menuType != null" >
+        #{menuType,jdbcType=INTEGER},
+      </if>
+      <if test="menuName != null" >
+        #{menuName,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.zhyan.fixed.bean.Permission" >
+    update permission
+    <set >
+      <if test="id != null" >
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="permissionName != null" >
+        permission_name = #{permissionName,jdbcType=CHAR},
+      </if>
+      <if test="permissionSign != null" >
+        permission_sign = #{permissionSign,jdbcType=CHAR},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=CHAR},
+      </if>
+      <if test="url != null" >
+        url = #{url,jdbcType=CHAR},
+      </if>
+      <if test="menuType != null" >
+        menu_type = #{menuType,jdbcType=INTEGER},
+      </if>
+      <if test="menuName != null" >
+        menu_name = #{menuName,jdbcType=CHAR},
+      </if>
+    </set>
+    where guid = #{guid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.zhyan.fixed.bean.Permission" >
+    update permission
+    set id = #{id,jdbcType=BIGINT},
+      permission_name = #{permissionName,jdbcType=CHAR},
+      permission_sign = #{permissionSign,jdbcType=CHAR},
+      description = #{description,jdbcType=CHAR},
+      url = #{url,jdbcType=CHAR},
+      menu_type = #{menuType,jdbcType=INTEGER},
+      menu_name = #{menuName,jdbcType=CHAR}
+    where guid = #{guid,jdbcType=CHAR}
+  </update>
+</mapper>

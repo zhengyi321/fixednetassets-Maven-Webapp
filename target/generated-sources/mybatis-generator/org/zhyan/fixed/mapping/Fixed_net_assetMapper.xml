@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.zhyan.fixed.dao.Fixed_net_assetMapper" >
+  <resultMap id="BaseResultMap" type="org.zhyan.fixed.bean.Fixed_net_asset" >
+    <id column="guid" property="guid" jdbcType="CHAR" />
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="total" property="total" jdbcType="CHAR" />
+    <result column="page" property="page" jdbcType="CHAR" />
+    <result column="code" property="code" jdbcType="CHAR" />
+    <result column="name" property="name" jdbcType="CHAR" />
+    <result column="ssize" property="ssize" jdbcType="CHAR" />
+    <result column="units" property="units" jdbcType="CHAR" />
+    <result column="life" property="life" jdbcType="BIGINT" />
+    <result column="salvage" property="salvage" jdbcType="DOUBLE" />
+    <result column="rate" property="rate" jdbcType="DOUBLE" />
+    <result column="year" property="year" jdbcType="DOUBLE" />
+    <result column="month" property="month" jdbcType="DOUBLE" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    guid, id, total, page, code, name, ssize, units, life, salvage, rate, year, month, 
+    create_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from fixed_net_asset
+    where guid = #{guid,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from fixed_net_asset
+    where guid = #{guid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="org.zhyan.fixed.bean.Fixed_net_asset" >
+    insert into fixed_net_asset (guid, id, total, page, 
+      code, name, ssize, units, 
+      life, salvage, rate, year, 
+      month, create_time)
+    values (#{guid,jdbcType=CHAR}, #{id,jdbcType=INTEGER}, #{total,jdbcType=CHAR}, #{page,jdbcType=CHAR}, 
+      #{code,jdbcType=CHAR}, #{name,jdbcType=CHAR}, #{ssize,jdbcType=CHAR}, #{units,jdbcType=CHAR}, 
+      #{life,jdbcType=BIGINT}, #{salvage,jdbcType=DOUBLE}, #{rate,jdbcType=DOUBLE}, #{year,jdbcType=DOUBLE}, 
+      #{month,jdbcType=DOUBLE}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="org.zhyan.fixed.bean.Fixed_net_asset" >
+    insert into fixed_net_asset
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="guid != null" >
+        guid,
+      </if>
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="total != null" >
+        total,
+      </if>
+      <if test="page != null" >
+        page,
+      </if>
+      <if test="code != null" >
+        code,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="ssize != null" >
+        ssize,
+      </if>
+      <if test="units != null" >
+        units,
+      </if>
+      <if test="life != null" >
+        life,
+      </if>
+      <if test="salvage != null" >
+        salvage,
+      </if>
+      <if test="rate != null" >
+        rate,
+      </if>
+      <if test="year != null" >
+        year,
+      </if>
+      <if test="month != null" >
+        month,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="guid != null" >
+        #{guid,jdbcType=CHAR},
+      </if>
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="total != null" >
+        #{total,jdbcType=CHAR},
+      </if>
+      <if test="page != null" >
+        #{page,jdbcType=CHAR},
+      </if>
+      <if test="code != null" >
+        #{code,jdbcType=CHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=CHAR},
+      </if>
+      <if test="ssize != null" >
+        #{ssize,jdbcType=CHAR},
+      </if>
+      <if test="units != null" >
+        #{units,jdbcType=CHAR},
+      </if>
+      <if test="life != null" >
+        #{life,jdbcType=BIGINT},
+      </if>
+      <if test="salvage != null" >
+        #{salvage,jdbcType=DOUBLE},
+      </if>
+      <if test="rate != null" >
+        #{rate,jdbcType=DOUBLE},
+      </if>
+      <if test="year != null" >
+        #{year,jdbcType=DOUBLE},
+      </if>
+      <if test="month != null" >
+        #{month,jdbcType=DOUBLE},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.zhyan.fixed.bean.Fixed_net_asset" >
+    update fixed_net_asset
+    <set >
+      <if test="id != null" >
+        id = #{id,jdbcType=INTEGER},
+      </if>
+      <if test="total != null" >
+        total = #{total,jdbcType=CHAR},
+      </if>
+      <if test="page != null" >
+        page = #{page,jdbcType=CHAR},
+      </if>
+      <if test="code != null" >
+        code = #{code,jdbcType=CHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=CHAR},
+      </if>
+      <if test="ssize != null" >
+        ssize = #{ssize,jdbcType=CHAR},
+      </if>
+      <if test="units != null" >
+        units = #{units,jdbcType=CHAR},
+      </if>
+      <if test="life != null" >
+        life = #{life,jdbcType=BIGINT},
+      </if>
+      <if test="salvage != null" >
+        salvage = #{salvage,jdbcType=DOUBLE},
+      </if>
+      <if test="rate != null" >
+        rate = #{rate,jdbcType=DOUBLE},
+      </if>
+      <if test="year != null" >
+        year = #{year,jdbcType=DOUBLE},
+      </if>
+      <if test="month != null" >
+        month = #{month,jdbcType=DOUBLE},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where guid = #{guid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.zhyan.fixed.bean.Fixed_net_asset" >
+    update fixed_net_asset
+    set id = #{id,jdbcType=INTEGER},
+      total = #{total,jdbcType=CHAR},
+      page = #{page,jdbcType=CHAR},
+      code = #{code,jdbcType=CHAR},
+      name = #{name,jdbcType=CHAR},
+      ssize = #{ssize,jdbcType=CHAR},
+      units = #{units,jdbcType=CHAR},
+      life = #{life,jdbcType=BIGINT},
+      salvage = #{salvage,jdbcType=DOUBLE},
+      rate = #{rate,jdbcType=DOUBLE},
+      year = #{year,jdbcType=DOUBLE},
+      month = #{month,jdbcType=DOUBLE},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
+    where guid = #{guid,jdbcType=CHAR}
+  </update>
+</mapper>

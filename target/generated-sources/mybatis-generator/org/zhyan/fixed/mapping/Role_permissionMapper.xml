@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.zhyan.fixed.dao.Role_permissionMapper" >
+  <resultMap id="BaseResultMap" type="org.zhyan.fixed.bean.Role_permission" >
+    <id column="guid" property="guid" jdbcType="CHAR" />
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="rid" property="rid" jdbcType="CHAR" />
+    <result column="pid" property="pid" jdbcType="CHAR" />
+    <result column="rolename" property="rolename" jdbcType="CHAR" />
+    <result column="permissionname" property="permissionname" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    guid, id, rid, pid, rolename, permissionname
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from role_permission
+    where guid = #{guid,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from role_permission
+    where guid = #{guid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="org.zhyan.fixed.bean.Role_permission" >
+    insert into role_permission (guid, id, rid, pid, 
+      rolename, permissionname)
+    values (#{guid,jdbcType=CHAR}, #{id,jdbcType=BIGINT}, #{rid,jdbcType=CHAR}, #{pid,jdbcType=CHAR}, 
+      #{rolename,jdbcType=CHAR}, #{permissionname,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.zhyan.fixed.bean.Role_permission" >
+    insert into role_permission
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="guid != null" >
+        guid,
+      </if>
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="rid != null" >
+        rid,
+      </if>
+      <if test="pid != null" >
+        pid,
+      </if>
+      <if test="rolename != null" >
+        rolename,
+      </if>
+      <if test="permissionname != null" >
+        permissionname,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="guid != null" >
+        #{guid,jdbcType=CHAR},
+      </if>
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="rid != null" >
+        #{rid,jdbcType=CHAR},
+      </if>
+      <if test="pid != null" >
+        #{pid,jdbcType=CHAR},
+      </if>
+      <if test="rolename != null" >
+        #{rolename,jdbcType=CHAR},
+      </if>
+      <if test="permissionname != null" >
+        #{permissionname,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.zhyan.fixed.bean.Role_permission" >
+    update role_permission
+    <set >
+      <if test="id != null" >
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="rid != null" >
+        rid = #{rid,jdbcType=CHAR},
+      </if>
+      <if test="pid != null" >
+        pid = #{pid,jdbcType=CHAR},
+      </if>
+      <if test="rolename != null" >
+        rolename = #{rolename,jdbcType=CHAR},
+      </if>
+      <if test="permissionname != null" >
+        permissionname = #{permissionname,jdbcType=CHAR},
+      </if>
+    </set>
+    where guid = #{guid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.zhyan.fixed.bean.Role_permission" >
+    update role_permission
+    set id = #{id,jdbcType=BIGINT},
+      rid = #{rid,jdbcType=CHAR},
+      pid = #{pid,jdbcType=CHAR},
+      rolename = #{rolename,jdbcType=CHAR},
+      permissionname = #{permissionname,jdbcType=CHAR}
+    where guid = #{guid,jdbcType=CHAR}
+  </update>
+</mapper>

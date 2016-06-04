@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.zhyan.fixed.dao.User_roleMapper" >
+  <resultMap id="BaseResultMap" type="org.zhyan.fixed.bean.User_role" >
+    <id column="guid" property="guid" jdbcType="CHAR" />
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="uid" property="uid" jdbcType="CHAR" />
+    <result column="rid" property="rid" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    guid, id, uid, rid
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from user_role
+    where guid = #{guid,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from user_role
+    where guid = #{guid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="org.zhyan.fixed.bean.User_role" >
+    insert into user_role (guid, id, uid, rid
+      )
+    values (#{guid,jdbcType=CHAR}, #{id,jdbcType=BIGINT}, #{uid,jdbcType=CHAR}, #{rid,jdbcType=CHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.zhyan.fixed.bean.User_role" >
+    insert into user_role
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="guid != null" >
+        guid,
+      </if>
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="uid != null" >
+        uid,
+      </if>
+      <if test="rid != null" >
+        rid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="guid != null" >
+        #{guid,jdbcType=CHAR},
+      </if>
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="uid != null" >
+        #{uid,jdbcType=CHAR},
+      </if>
+      <if test="rid != null" >
+        #{rid,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.zhyan.fixed.bean.User_role" >
+    update user_role
+    <set >
+      <if test="id != null" >
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="uid != null" >
+        uid = #{uid,jdbcType=CHAR},
+      </if>
+      <if test="rid != null" >
+        rid = #{rid,jdbcType=CHAR},
+      </if>
+    </set>
+    where guid = #{guid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.zhyan.fixed.bean.User_role" >
+    update user_role
+    set id = #{id,jdbcType=BIGINT},
+      uid = #{uid,jdbcType=CHAR},
+      rid = #{rid,jdbcType=CHAR}
+    where guid = #{guid,jdbcType=CHAR}
+  </update>
+</mapper>

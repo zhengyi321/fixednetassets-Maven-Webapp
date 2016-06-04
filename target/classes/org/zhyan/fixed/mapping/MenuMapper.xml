@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.zhyan.fixed.dao.MenuMapper" >
+  <resultMap id="BaseResultMap" type="org.zhyan.fixed.bean.Menu" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="guid" property="guid" jdbcType="CHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="CHAR" />
+    <result column="sign" property="sign" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, guid, type, name, sign
+  </sql>
+  <select id="selectAllMenu" resultMap="BaseResultMap">
+  	select * from menu  
+  </select>
+  <select id="selectAllCount" resultType="Integer">
+  	select count(1) from menu  
+  </select>
+  <select id="selectMenuByPage" parameterType="org.zhyan.fixed.util.Page" resultMap="BaseResultMap">  
+  	select * from menu order by id desc  limit #{startPos},#{pageSize}  
+  </select>
+  <delete id="deleteByGuid" parameterType="String">  
+  	delete from menu where guid = #{guid,jdbcType=CHAR}
+  </delete>
+  <select id="selectMenuBySign" resultMap="BaseResultMap" parameterType="String" >
+    select 
+    <include refid="Base_Column_List" />
+    from menu
+    where sign = #{sign,jdbcType=CHAR}
+  </select>  
+  <select id="selectMenuByType" resultMap="BaseResultMap" parameterType="String" >
+    select 
+    <include refid="Base_Column_List" />
+    from menu
+    where type = #{type,jdbcType=CHAR}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from menu
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from menu
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.zhyan.fixed.bean.Menu" >
+    insert into menu (id, guid, type, 
+      name, sign)
+    values (#{id,jdbcType=INTEGER}, #{guid,jdbcType=CHAR}, #{type,jdbcType=INTEGER}, 
+      #{name,jdbcType=CHAR}, #{sign,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.zhyan.fixed.bean.Menu" >
+    insert into menu
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="guid != null" >
+        guid,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="sign != null" >
+        sign,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="guid != null" >
+        #{guid,jdbcType=CHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=CHAR},
+      </if>
+      <if test="sign != null" >
+        #{sign,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.zhyan.fixed.bean.Menu" >
+    update menu
+    <set >
+      <if test="guid != null" >
+        guid = #{guid,jdbcType=CHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=CHAR},
+      </if>
+      <if test="sign != null" >
+        sign = #{sign,jdbcType=CHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.zhyan.fixed.bean.Menu" >
+    update menu
+    set guid = #{guid,jdbcType=CHAR},
+      type = #{type,jdbcType=INTEGER},
+      name = #{name,jdbcType=CHAR},
+      sign = #{sign,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

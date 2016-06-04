@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.zhyan.fixed.dao.RoleMapper" >
+  <resultMap id="BaseResultMap" type="org.zhyan.fixed.bean.Role" >
+    <id column="guid" property="guid" jdbcType="CHAR" />
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="role_name" property="roleName" jdbcType="CHAR" />
+    <result column="role_sign" property="roleSign" jdbcType="CHAR" />
+    <result column="description" property="description" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    guid, id, role_name, role_sign, description
+  </sql>
+  
+  
+  
+  <select id="selectAllCounts" resultType="Integer">
+    select count(1) from role
+  </select>  
+  
+  <select id="selectRoleByRoleSign" parameterType="String" resultMap="BaseResultMap">
+	select * from role  where role_sign= #{roleSign,jdbcType=CHAR}
+  </select>
+  
+  <!-- 分页查询 -->
+  <select id="selectRoleByRoleName" parameterType="String" resultMap="BaseResultMap">
+	select * from role  where role_name= #{rolename,jdbcType=CHAR}
+  </select>   
+  
+  <select id="selectByPage" parameterType="org.zhyan.fixed.util.Page" resultMap="BaseResultMap">
+	select * from role ORDER BY role_name DESC limit #{startPos},#{pageSize}
+  </select>
+
+  <select id="selectAllRoles"  resultMap="BaseResultMap">
+	select * from role  
+  </select>  
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from role
+    where guid = #{guid,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from role
+    where guid = #{guid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="org.zhyan.fixed.bean.Role" >
+    insert into role (guid, id, role_name, 
+      role_sign, description)
+    values (#{guid,jdbcType=CHAR}, #{id,jdbcType=BIGINT}, #{roleName,jdbcType=CHAR}, 
+      #{roleSign,jdbcType=CHAR}, #{description,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.zhyan.fixed.bean.Role" >
+    insert into role
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="guid != null" >
+        guid,
+      </if>
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="roleName != null" >
+        role_name,
+      </if>
+      <if test="roleSign != null" >
+        role_sign,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="guid != null" >
+        #{guid,jdbcType=CHAR},
+      </if>
+      <if test="id != null" >
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="roleName != null" >
+        #{roleName,jdbcType=CHAR},
+      </if>
+      <if test="roleSign != null" >
+        #{roleSign,jdbcType=CHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.zhyan.fixed.bean.Role" >
+    update role
+    <set >
+      <if test="id != null" >
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="roleName != null" >
+        role_name = #{roleName,jdbcType=CHAR},
+      </if>
+      <if test="roleSign != null" >
+        role_sign = #{roleSign,jdbcType=CHAR},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=CHAR},
+      </if>
+    </set>
+    where guid = #{guid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.zhyan.fixed.bean.Role" >
+    update role
+    set id = #{id,jdbcType=BIGINT},
+      role_name = #{roleName,jdbcType=CHAR},
+      role_sign = #{roleSign,jdbcType=CHAR},
+      description = #{description,jdbcType=CHAR}
+    where guid = #{guid,jdbcType=CHAR}
+  </update>
+</mapper>

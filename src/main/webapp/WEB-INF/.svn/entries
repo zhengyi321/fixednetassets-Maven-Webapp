@@ -1,0 +1,89 @@
+10
+
+dir
+12
+http://code.taobao.org/svn/maven_fixednetassets/fixednetassets%20Maven%20Webapp/src/main/webapp/WEB-INF
+http://code.taobao.org/svn/maven_fixednetassets
+
+
+
+2016-04-04T14:36:11.217798Z
+12
+zhengyi321
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ba396d8d-c129-418b-877b-39653285cf08
+
+common
+dir
+
+fixednetassets
+dir
+
+fixedratedetail
+dir
+
+menu
+dir
+
+permission
+dir
+
+ratetotal
+dir
+
+role
+dir
+
+rolepermission
+dir
+
+user
+dir
+
+web.xml
+file
+
+
+
+
+2016-03-30T02:55:36.863000Z
+b07f2c64d01bbb17b2b2e8d3e5a6d94a
+2016-03-30T09:05:31.996024Z
+6
+zhengyi321
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3732
+

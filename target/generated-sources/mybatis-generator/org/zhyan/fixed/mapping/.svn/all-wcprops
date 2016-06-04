@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/maven_fixednetassets/!svn/ver/6/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/mapping
+END
+RoleMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/maven_fixednetassets/!svn/ver/6/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/mapping/RoleMapper.xml
+END
+Role_permissionMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/maven_fixednetassets/!svn/ver/6/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/mapping/Role_permissionMapper.xml
+END
+User_roleMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/maven_fixednetassets/!svn/ver/6/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/mapping/User_roleMapper.xml
+END
+UserMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/maven_fixednetassets/!svn/ver/6/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/mapping/UserMapper.xml
+END
+AccountMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/maven_fixednetassets/!svn/ver/13/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/mapping/AccountMapper.xml
+END
+PermissionMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/maven_fixednetassets/!svn/ver/6/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/mapping/PermissionMapper.xml
+END
+Fixed_net_assetMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/maven_fixednetassets/!svn/ver/6/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/mapping/Fixed_net_assetMapper.xml
+END
+Fixed_rate_detailMapper.xml
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/maven_fixednetassets/!svn/ver/6/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/mapping/Fixed_rate_detailMapper.xml
+END

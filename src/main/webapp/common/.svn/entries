@@ -1,0 +1,44 @@
+10
+
+dir
+10
+http://code.taobao.org/svn/maven_fixednetassets/fixednetassets%20Maven%20Webapp/src/main/webapp/common
+http://code.taobao.org/svn/maven_fixednetassets
+
+
+
+2016-03-29T09:04:38.971170Z
+4
+zhengyi321
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ba396d8d-c129-418b-877b-39653285cf08
+
+
+
+
+
+
+0
+
+EmployeeMgr.files
+dir
+
+Left.files
+dir
+
+Top.files
+dir
+

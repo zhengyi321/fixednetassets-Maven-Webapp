@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/maven_fixednetassets/!svn/ver/12/fixednetassets%20Maven%20Webapp/src/main/webapp/WEB-INF/fixedratedetail
+END
+edit.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/maven_fixednetassets/!svn/ver/29/fixednetassets%20Maven%20Webapp/src/main/webapp/WEB-INF/fixedratedetail/edit.jsp
+END
+add.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/maven_fixednetassets/!svn/ver/32/fixednetassets%20Maven%20Webapp/src/main/webapp/WEB-INF/fixedratedetail/add.jsp
+END
+fixedratedetailselect.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/maven_fixednetassets/!svn/ver/33/fixednetassets%20Maven%20Webapp/src/main/webapp/WEB-INF/fixedratedetail/fixedratedetailselect.jsp
+END

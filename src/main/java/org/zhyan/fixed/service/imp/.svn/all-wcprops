@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/maven_fixednetassets/!svn/ver/12/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/service/imp
+END
+Fixed_rate_detailServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/maven_fixednetassets/!svn/ver/31/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/service/imp/Fixed_rate_detailServiceImpl.java
+END
+RoleServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/maven_fixednetassets/!svn/ver/8/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/service/imp/RoleServiceImpl.java
+END
+Role_permissionServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/maven_fixednetassets/!svn/ver/6/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/service/imp/Role_permissionServiceImpl.java
+END
+User_roleServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/maven_fixednetassets/!svn/ver/7/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/service/imp/User_roleServiceImpl.java
+END
+UserServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/maven_fixednetassets/!svn/ver/6/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/service/imp/UserServiceImpl.java
+END
+AccountServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/maven_fixednetassets/!svn/ver/12/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/service/imp/AccountServiceImpl.java
+END
+PermissionServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/maven_fixednetassets/!svn/ver/8/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/service/imp/PermissionServiceImpl.java
+END
+MenuServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/maven_fixednetassets/!svn/ver/7/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/service/imp/MenuServiceImpl.java
+END
+Fixed_rate_total_monthServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/maven_fixednetassets/!svn/ver/21/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/service/imp/Fixed_rate_total_monthServiceImpl.java
+END
+Fixed_net_assetServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/maven_fixednetassets/!svn/ver/34/fixednetassets%20Maven%20Webapp/src/main/java/org/zhyan/fixed/service/imp/Fixed_net_assetServiceImpl.java
+END

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/maven_fixednetassets/!svn/ver/6/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/bean
+END
+Permission.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/maven_fixednetassets/!svn/ver/4/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/bean/Permission.java
+END
+Account.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/maven_fixednetassets/!svn/ver/13/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/bean/Account.java
+END
+User_role.java.svntmp
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/maven_fixednetassets/!svn/ver/13/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/bean/User_role.java.svntmp
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/maven_fixednetassets/!svn/ver/4/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/bean/User.java
+END
+User_role.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/maven_fixednetassets/!svn/ver/4/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/bean/User_role.java
+END
+Role_permission.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/maven_fixednetassets/!svn/ver/4/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/bean/Role_permission.java
+END
+Role.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/maven_fixednetassets/!svn/ver/4/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/bean/Role.java
+END
+Fixed_rate_detail.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/maven_fixednetassets/!svn/ver/13/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/bean/Fixed_rate_detail.java
+END
+Fixed_net_asset.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/maven_fixednetassets/!svn/ver/13/fixednetassets%20Maven%20Webapp/target/generated-sources/mybatis-generator/org/zhyan/fixed/bean/Fixed_net_asset.java
+END

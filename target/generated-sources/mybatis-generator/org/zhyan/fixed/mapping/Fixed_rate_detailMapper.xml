@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.zhyan.fixed.dao.Fixed_rate_detailMapper" >
+  <resultMap id="BaseResultMap" type="org.zhyan.fixed.bean.Fixed_rate_detail" >
+    <id column="guid" property="guid" jdbcType="CHAR" />
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="yearproff_month" property="yearproffMonth" jdbcType="INTEGER" />
+    <result column="yearproff_day" property="yearproffDay" jdbcType="INTEGER" />
+    <result column="yearproff_type" property="yearproffType" jdbcType="CHAR" />
+    <result column="yearproff_num" property="yearproffNum" jdbcType="CHAR" />
+    <result column="remark" property="remark" jdbcType="CHAR" />
+    <result column="fixed_add_num" property="fixedAddNum" jdbcType="BIGINT" />
+    <result column="fixed_add_price" property="fixedAddPrice" jdbcType="DOUBLE" />
+    <result column="fixed_add_total" property="fixedAddTotal" jdbcType="DOUBLE" />
+    <result column="fixed_reduce_num" property="fixedReduceNum" jdbcType="BIGINT" />
+    <result column="fixed_reduce_price" property="fixedReducePrice" jdbcType="DOUBLE" />
+    <result column="fixed_balance_num" property="fixedBalanceNum" jdbcType="BIGINT" />
+    <result column="fixed_balance_price" property="fixedBalancePrice" jdbcType="DOUBLE" />
+    <result column="sum_depreciation_currentmonth" property="sumDepreciationCurrentmonth" jdbcType="DOUBLE" />
+    <result column="sum_depreciation_total" property="sumDepreciationTotal" jdbcType="DOUBLE" />
+    <result column="fixed_net_worth" property="fixedNetWorth" jdbcType="DOUBLE" />
+    <result column="pid" property="pid" jdbcType="CHAR" />
+    <result column="year" property="year" jdbcType="CHAR" />
+    <result column="manage_fee" property="manageFee" jdbcType="DOUBLE" />
+    <result column="made_fee" property="madeFee" jdbcType="DOUBLE" />
+    <result column="flag" property="flag" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    guid, id, yearproff_month, yearproff_day, yearproff_type, yearproff_num, remark, 
+    fixed_add_num, fixed_add_price, fixed_add_total, fixed_reduce_num, fixed_reduce_price, 
+    fixed_balance_num, fixed_balance_price, sum_depreciation_currentmonth, sum_depreciation_total, 
+    fixed_net_worth, pid, year, manage_fee, made_fee, flag, name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from fixed_rate_detail
+    where guid = #{guid,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from fixed_rate_detail
+    where guid = #{guid,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="org.zhyan.fixed.bean.Fixed_rate_detail" >
+    insert into fixed_rate_detail (guid, id, yearproff_month, 
+      yearproff_day, yearproff_type, yearproff_num, 
+      remark, fixed_add_num, fixed_add_price, 
+      fixed_add_total, fixed_reduce_num, fixed_reduce_price, 
+      fixed_balance_num, fixed_balance_price, sum_depreciation_currentmonth, 
+      sum_depreciation_total, fixed_net_worth, pid, 
+      year, manage_fee, made_fee, 
+      flag, name)
+    values (#{guid,jdbcType=CHAR}, #{id,jdbcType=INTEGER}, #{yearproffMonth,jdbcType=INTEGER}, 
+      #{yearproffDay,jdbcType=INTEGER}, #{yearproffType,jdbcType=CHAR}, #{yearproffNum,jdbcType=CHAR}, 
+      #{remark,jdbcType=CHAR}, #{fixedAddNum,jdbcType=BIGINT}, #{fixedAddPrice,jdbcType=DOUBLE}, 
+      #{fixedAddTotal,jdbcType=DOUBLE}, #{fixedReduceNum,jdbcType=BIGINT}, #{fixedReducePrice,jdbcType=DOUBLE}, 
+      #{fixedBalanceNum,jdbcType=BIGINT}, #{fixedBalancePrice,jdbcType=DOUBLE}, #{sumDepreciationCurrentmonth,jdbcType=DOUBLE}, 
+      #{sumDepreciationTotal,jdbcType=DOUBLE}, #{fixedNetWorth,jdbcType=DOUBLE}, #{pid,jdbcType=CHAR}, 
+      #{year,jdbcType=CHAR}, #{manageFee,jdbcType=DOUBLE}, #{madeFee,jdbcType=DOUBLE}, 
+      #{flag,jdbcType=INTEGER}, #{name,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.zhyan.fixed.bean.Fixed_rate_detail" >
+    insert into fixed_rate_detail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="guid != null" >
+        guid,
+      </if>
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="yearproffMonth != null" >
+        yearproff_month,
+      </if>
+      <if test="yearproffDay != null" >
+        yearproff_day,
+      </if>
+      <if test="yearproffType != null" >
+        yearproff_type,
+      </if>
+      <if test="yearproffNum != null" >
+        yearproff_num,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="fixedAddNum != null" >
+        fixed_add_num,
+      </if>
+      <if test="fixedAddPrice != null" >
+        fixed_add_price,
+      </if>
+      <if test="fixedAddTotal != null" >
+        fixed_add_total,
+      </if>
+      <if test="fixedReduceNum != null" >
+        fixed_reduce_num,
+      </if>
+      <if test="fixedReducePrice != null" >
+        fixed_reduce_price,
+      </if>
+      <if test="fixedBalanceNum != null" >
+        fixed_balance_num,
+      </if>
+      <if test="fixedBalancePrice != null" >
+        fixed_balance_price,
+      </if>
+      <if test="sumDepreciationCurrentmonth != null" >
+        sum_depreciation_currentmonth,
+      </if>
+      <if test="sumDepreciationTotal != null" >
+        sum_depreciation_total,
+      </if>
+      <if test="fixedNetWorth != null" >
+        fixed_net_worth,
+      </if>
+      <if test="pid != null" >
+        pid,
+      </if>
+      <if test="year != null" >
+        year,
+      </if>
+      <if test="manageFee != null" >
+        manage_fee,
+      </if>
+      <if test="madeFee != null" >
+        made_fee,
+      </if>
+      <if test="flag != null" >
+        flag,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="guid != null" >
+        #{guid,jdbcType=CHAR},
+      </if>
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="yearproffMonth != null" >
+        #{yearproffMonth,jdbcType=INTEGER},
+      </if>
+      <if test="yearproffDay != null" >
+        #{yearproffDay,jdbcType=INTEGER},
+      </if>
+      <if test="yearproffType != null" >
+        #{yearproffType,jdbcType=CHAR},
+      </if>
+      <if test="yearproffNum != null" >
+        #{yearproffNum,jdbcType=CHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=CHAR},
+      </if>
+      <if test="fixedAddNum != null" >
+        #{fixedAddNum,jdbcType=BIGINT},
+      </if>
+      <if test="fixedAddPrice != null" >
+        #{fixedAddPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="fixedAddTotal != null" >
+        #{fixedAddTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="fixedReduceNum != null" >
+        #{fixedReduceNum,jdbcType=BIGINT},
+      </if>
+      <if test="fixedReducePrice != null" >
+        #{fixedReducePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="fixedBalanceNum != null" >
+        #{fixedBalanceNum,jdbcType=BIGINT},
+      </if>
+      <if test="fixedBalancePrice != null" >
+        #{fixedBalancePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="sumDepreciationCurrentmonth != null" >
+        #{sumDepreciationCurrentmonth,jdbcType=DOUBLE},
+      </if>
+      <if test="sumDepreciationTotal != null" >
+        #{sumDepreciationTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="fixedNetWorth != null" >
+        #{fixedNetWorth,jdbcType=DOUBLE},
+      </if>
+      <if test="pid != null" >
+        #{pid,jdbcType=CHAR},
+      </if>
+      <if test="year != null" >
+        #{year,jdbcType=CHAR},
+      </if>
+      <if test="manageFee != null" >
+        #{manageFee,jdbcType=DOUBLE},
+      </if>
+      <if test="madeFee != null" >
+        #{madeFee,jdbcType=DOUBLE},
+      </if>
+      <if test="flag != null" >
+        #{flag,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.zhyan.fixed.bean.Fixed_rate_detail" >
+    update fixed_rate_detail
+    <set >
+      <if test="id != null" >
+        id = #{id,jdbcType=INTEGER},
+      </if>
+      <if test="yearproffMonth != null" >
+        yearproff_month = #{yearproffMonth,jdbcType=INTEGER},
+      </if>
+      <if test="yearproffDay != null" >
+        yearproff_day = #{yearproffDay,jdbcType=INTEGER},
+      </if>
+      <if test="yearproffType != null" >
+        yearproff_type = #{yearproffType,jdbcType=CHAR},
+      </if>
+      <if test="yearproffNum != null" >
+        yearproff_num = #{yearproffNum,jdbcType=CHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=CHAR},
+      </if>
+      <if test="fixedAddNum != null" >
+        fixed_add_num = #{fixedAddNum,jdbcType=BIGINT},
+      </if>
+      <if test="fixedAddPrice != null" >
+        fixed_add_price = #{fixedAddPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="fixedAddTotal != null" >
+        fixed_add_total = #{fixedAddTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="fixedReduceNum != null" >
+        fixed_reduce_num = #{fixedReduceNum,jdbcType=BIGINT},
+      </if>
+      <if test="fixedReducePrice != null" >
+        fixed_reduce_price = #{fixedReducePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="fixedBalanceNum != null" >
+        fixed_balance_num = #{fixedBalanceNum,jdbcType=BIGINT},
+      </if>
+      <if test="fixedBalancePrice != null" >
+        fixed_balance_price = #{fixedBalancePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="sumDepreciationCurrentmonth != null" >
+        sum_depreciation_currentmonth = #{sumDepreciationCurrentmonth,jdbcType=DOUBLE},
+      </if>
+      <if test="sumDepreciationTotal != null" >
+        sum_depreciation_total = #{sumDepreciationTotal,jdbcType=DOUBLE},
+      </if>
+      <if test="fixedNetWorth != null" >
+        fixed_net_worth = #{fixedNetWorth,jdbcType=DOUBLE},
+      </if>
+      <if test="pid != null" >
+        pid = #{pid,jdbcType=CHAR},
+      </if>
+      <if test="year != null" >
+        year = #{year,jdbcType=CHAR},
+      </if>
+      <if test="manageFee != null" >
+        manage_fee = #{manageFee,jdbcType=DOUBLE},
+      </if>
+      <if test="madeFee != null" >
+        made_fee = #{madeFee,jdbcType=DOUBLE},
+      </if>
+      <if test="flag != null" >
+        flag = #{flag,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=CHAR},
+      </if>
+    </set>
+    where guid = #{guid,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.zhyan.fixed.bean.Fixed_rate_detail" >
+    update fixed_rate_detail
+    set id = #{id,jdbcType=INTEGER},
+      yearproff_month = #{yearproffMonth,jdbcType=INTEGER},
+      yearproff_day = #{yearproffDay,jdbcType=INTEGER},
+      yearproff_type = #{yearproffType,jdbcType=CHAR},
+      yearproff_num = #{yearproffNum,jdbcType=CHAR},
+      remark = #{remark,jdbcType=CHAR},
+      fixed_add_num = #{fixedAddNum,jdbcType=BIGINT},
+      fixed_add_price = #{fixedAddPrice,jdbcType=DOUBLE},
+      fixed_add_total = #{fixedAddTotal,jdbcType=DOUBLE},
+      fixed_reduce_num = #{fixedReduceNum,jdbcType=BIGINT},
+      fixed_reduce_price = #{fixedReducePrice,jdbcType=DOUBLE},
+      fixed_balance_num = #{fixedBalanceNum,jdbcType=BIGINT},
+      fixed_balance_price = #{fixedBalancePrice,jdbcType=DOUBLE},
+      sum_depreciation_currentmonth = #{sumDepreciationCurrentmonth,jdbcType=DOUBLE},
+      sum_depreciation_total = #{sumDepreciationTotal,jdbcType=DOUBLE},
+      fixed_net_worth = #{fixedNetWorth,jdbcType=DOUBLE},
+      pid = #{pid,jdbcType=CHAR},
+      year = #{year,jdbcType=CHAR},
+      manage_fee = #{manageFee,jdbcType=DOUBLE},
+      made_fee = #{madeFee,jdbcType=DOUBLE},
+      flag = #{flag,jdbcType=INTEGER},
+      name = #{name,jdbcType=CHAR}
+    where guid = #{guid,jdbcType=CHAR}
+  </update>
+</mapper>

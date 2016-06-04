@@ -1,0 +1,77 @@
+10
+
+dir
+10
+http://code.taobao.org/svn/maven_fixednetassets/fixednetassets%20Maven%20Webapp/src/main/webapp
+http://code.taobao.org/svn/maven_fixednetassets
+
+
+
+2016-03-31T13:55:45.241790Z
+9
+zhengyi321
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ba396d8d-c129-418b-877b-39653285cf08
+
+WEB-INF
+dir
+
+common
+dir
+
+css
+dir
+
+images
+dir
+
+js
+dir
+
+login.jsp
+file
+12
+
+
+
+2016-04-05T00:32:54.569000Z
+3ec9f37d94277fd8c15aa01443a9a163
+2016-04-04T14:36:11.217798Z
+12
+zhengyi321
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4581
+
